@@ -1,0 +1,19 @@
+extends layout
+
+block content
+  div.container
+    div.content
+      h1 Split.GIF - an animated GIF file splitter
+      p This project enables an end user to upload an animated GIF file and then download the individual frames as separate images of the uploaded GIF  
+      form(role="form", action="/", method="post", enctype="multipart/form-data")        
+          span.btn.btn-default.btn-file(data-toggle="tooltip" data-placement="left" title="browse for a file..")
+            | Upload your GIF... 
+            input(type="file", name="gif-File", id="gif-File")
+      span= validationFailMsg
+      p.mTop10 Don't have a GIF file to upload? You can try 
+        a.wide-tooltip(href="samplegif"
+          data-toggle="tooltip" data-placement="bottom" 
+          data-template="<div class='tooltip' role='tooltip'><div class='tooltip-arrow'></div><div class='tooltip-inner wide'></div></div>"
+          title="(creative commons free license courtesy of http://retsamys.deviantart.com/art/Cube-animated-GIF-327924282)") this one         
+        
+         
